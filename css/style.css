@@ -11,7 +11,6 @@ body {
 }
 
 .container {
-  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -24,7 +23,7 @@ body {
   height: auto;
   width: auto;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 25px;
   box-shadow: 0 0 30px rgb(187, 130, 130);
   background-color: #fff;
 }
@@ -125,23 +124,22 @@ button:hover {
 }
 
 .option {
-  padding: 20px;
+  padding: 10px;
 }
 
 .option a {
   display: block;
+  font-size: 40px;
   text-align: center;
   width: 100px;
-  padding: 15px 10px;
   font-weight: 400;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s ease;
   text-decoration: none;
-  background-color: #1B1B1B;
-  color: #fffde7;
-  box-shadow: 0 0 30px rgb(187, 130, 130);
+  color: #0a1e23;
 }
+
 .option a:hover {
   transform: scale(1.1);
-}/*# sourceMappingURL=style.css.map */
+}

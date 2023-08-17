@@ -2,12 +2,17 @@ let num1, num2;
 let respuesta;
 let indiceCorrecto;
 
+const texto = "Hola mundo";
+const velocidadEscritura = 100; // Velocidad de escritura en milisegundos
+const velocidadEspera = 3000; // Tiempo de espera después de escribir la frase completa en milisegundos
+
 txt_suma = document.getElementById("suma");
 op1 = document.getElementById("op1");
 op2 = document.getElementById("op2");
 op3 = document.getElementById("op3");
 txt_msj = document.getElementById("msj");
 txt_resultado = document.getElementById("resultado");
+const textoEscrito = document.getElementById("texto-escrito");
 
 function comenzar(){
     txt_resultado.innerHTML = "?";
@@ -59,3 +64,22 @@ function limpiar(){
 }
 
 comenzar();
+
+// TODO: Funcion para escribir texto en tiempo real
+
+function escribirTexto(texto, index) {
+  if (index <= texto.length) {
+    textoEscrito.innerHTML = texto.substring(0, index) + "|";
+    index++;
+    setTimeout(function() {
+      escribirTexto(texto, index);
+    }, velocidadEscritura);
+  } else {
+    setTimeout(function() {
+      textoEscrito.innerHTML = "";
+      escribirTexto(texto, 0);
+    }, velocidadEspera);
+  }
+}
+
+escribirTexto(texto, 0);
