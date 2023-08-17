@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - CodeDev</title>
+    <link rel="stylesheet" href="../css/gamePlay.css">
+    <link rel="shortcut icon" href="../src/calculator.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+
+    <div class="regresar">
+        <a href="../html/index.html"><i class="ri-home-6-line"></i></a>
+    </div>
+
+    <h1 id="texto-escrito"></h1>
+    <div class="container">
+        <div class="container-center">
+
+            <div class="izquierdo">
+                <div class="container-operation">
+                    <span id="suma">9 + 9</span>
+                    <span class="resultado" id="resultado">18</span>
+                </div>
+                <hr>
+                <span id="msj" class="msj">EXCELENTE!!</span>
+            </div>
+    
+            <div class="derecha">
+                <span id="op1" class="option" onclick="controlarRespuesta(this)">18</span>
+                <span id="op2" class="option" onclick="controlarRespuesta(this)">18</span>
+                <span id="op3" class="option" onclick="controlarRespuesta(this)">18</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/gamePlay.js"></script>
+
+</body>
+</html>
